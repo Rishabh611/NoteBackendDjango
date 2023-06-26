@@ -5,4 +5,4 @@ from user.models import User
 class Notes(models.Model):
     content = models.CharField(max_length=255)
     important = models.CharField(max_length=5)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User,related_name='notes', on_delete=models.CASCADE)
